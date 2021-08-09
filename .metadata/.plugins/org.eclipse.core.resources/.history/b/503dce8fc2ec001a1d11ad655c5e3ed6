@@ -1,0 +1,43 @@
+package E1_E10;
+
+import java.util.Scanner;
+
+/*A program reading a floaty and printing zero in number is zero. Otherwise, print positive/negative. 
+ * Print small for Math.abs <0 and large if Math.abs >1000000
+ */
+
+public class E2 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.print("Enter an integer: ");
+		double floaty_number = in.nextDouble();
+		
+		double abs_floaty = Math.abs(floaty_number);
+		
+		
+		
+		if (abs_floaty < 1) {
+			System.out.println("Your number is small.");
+		}
+		else if (abs_floaty > 1000000) {
+			System.out.println("Your number is large.");
+		}
+		
+		if (abs_floaty > 0)
+		{
+			System.out.println("Your number is positive.");
+		}
+		else if (abs_floaty < 0)
+		{
+			System.out.println("Your number is negative.");
+
+		}
+		else if (abs_floaty == 0)
+		{
+			System.out.println("Your number is zero.");
+		}
+		in.close();
+
+	}
+}

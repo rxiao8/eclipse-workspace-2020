@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+/*Rose X.
+ * October 2020
+ * Driver class for the Tic Tac Toe game
+ */
+public class driverTwo {
+	public static void main(String[] args) {
+		Game first = new Game();
+		first.printBoard();
+		boolean keepPlaying = true;
+		
+		
+		
+		Scanner in = new Scanner(System.in);
+		/*System.out.println("Begin Tic-Tac-Toe. Type \"Quit\" to stop playing.");
+		if (in.next().equals("Quit")) {
+			keepPlaying = false;
+			break;
+		}
+		while (keepPlaying) {
+		System.out.println("Player One input the row number of your move.");
+		in = new Scanner(System.in);
+		int rowO = in.nextInt();
+		System.out.println("Player One input the column number of your move.");
+		int columnO = in.nextInt();
+		first.playerOneMoves(rowO, columnO);
+		
+		System.out.println("Player Two input the row number of your move.");
+		int rowT = in.nextInt();
+		System.out.println("Player Two input the column number of your move.");
+		int columnT = in.nextInt();
+		first.playerTwoMoves(rowT, columnT);
+		
+		}
+		*/
+		first.playerOneMoves(1, 1);
+		first.playerOneMoves(1, 2);
+		first.playerTwoMoves(1, 3);
+		first.playerTwoMoves(2, 1);
+		first.playerOneMoves(3, 1);
+		first.playerOneMoves(2, 2);
+		first.playerOneMoves(2, 3);
+		first.playerTwoMoves(3, 3);
+		first.playerTwoMoves(3, 2);
+	}
+}

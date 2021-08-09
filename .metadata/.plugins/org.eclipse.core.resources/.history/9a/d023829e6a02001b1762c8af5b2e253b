@@ -1,0 +1,35 @@
+/* Rose X.
+ * September 2020
+ * Write a method that appends one array list to another
+ */
+public class problemOne {
+
+	public static void main(String[] args) {
+		int [] arrayA = {1, 4, 9, 16};
+		int [] arrayB = {9, 7, 4, 9, 11};
+		
+		int [] newArray = new int [3 * arrayA.length];
+		
+		int j = arrayA.length + 1;
+		if (j < newArray.length) {
+			for (int value: arrayB) {
+				newArray[j] = value;
+			
+		}
+		}
+	}
+	/**public static ArrayList <Integer> append(ArrayList<Integer> a, ArrayList<Integer> b) {
+		for (int value: b) {
+			
+			
+			
+			
+			
+			
+			
+
+			
+		}
+	} */
+
+}

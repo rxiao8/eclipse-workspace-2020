@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;AudioLab1/src&apos;&#x0D;&#x0A;- Original project: &apos;AudioLab1&apos;&#x0D;&#x0A;- Destination element: &apos;AudioLab1/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Audio.java&#x0D;&#x0A;     AudioGUI.java&#x0D;&#x0A;- Update references to refactored element" description="Move files" destination="/src" element1="StarterAudioLab/AudioLab/src/Audio.java" element2="StarterAudioLab/AudioLab/src/AudioGUI.java" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1601744901076" units="0" version="1.0"/>
+</session>

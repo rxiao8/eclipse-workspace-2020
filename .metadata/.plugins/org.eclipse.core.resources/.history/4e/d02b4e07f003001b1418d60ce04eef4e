@@ -1,0 +1,156 @@
+
+/**
+* AudioGUI.java, Assignments 8, 
+* @author ?
+* @version 1.1, 4/15/2005
+*
+* Creates a GUI that reads and manipulates the audio
+* from a .wav file
+*/
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class AudioGUI extends JFrame
+{
+   private static Audio audio;    // object for audio data
+   private JTextField audioInfo;  // displays audio info
+
+   private JPanel buttonPanel;    // panel that contains the buttons
+   private JButton playButton;    // play button
+   private JButton revButton;     // reverse button
+   private JButton slowButton;     // slow button
+   private JButton fastButton;     // fast button
+   private JButton mirrorButton;     // mirror button
+   /**
+   * Constructor creates panels, fields, and buttons
+   */
+   public AudioGUI()
+   {
+      // title, position, and size the GUI frame
+      super("Java Audio");
+      setLocation(200,200);
+      setSize (350,100);
+
+      // set main window attributes
+      Container c = getContentPane();
+      c.setLayout(new FlowLayout());
+
+      // text field for audio information
+      audioInfo = new JTextField("",15);
+      audioInfo.setBackground(Color.white);
+      audioInfo.setForeground(Color.black);
+      audioInfo.setEditable(false);
+      setAudioInfo();
+
+      // add text field to container
+      c.add(audioInfo);
+
+      // create button panel to contain buttons
+      buttonPanel = new JPanel();
+
+      // create buttons
+      playButton    = new JButton("Play");
+      revButton     = new JButton("Reverse");
+      slowButton     = new JButton("Slow");
+      fastButton     = new JButton("Fast");
+      mirrorButton     = new JButton("Mirror");
+
+      // add buttons to button panel
+      buttonPanel.add(playButton);
+      buttonPanel.add(revButton);
+      buttonPanel.add(slowButton);
+      buttonPanel.add(fastButton);
+      buttonPanel.add(mirrorButton);
+
+      // add button panel to container
+      c.add (buttonPanel);
+
+
+      // create action listeners for each button, tells
+      //  Java what to do when a button is clicked
+
+      // if play button clicked then execute play()
+      playButton.addActionListener(new ActionListener()
+      {
+         public void actionPerformed(ActionEvent e)
+         {
+            audio.play();
+            System.out.println("Average " + audio.sampleAverage());
+            System.out.println("Standard Dev " + audio.sampleStandDev());
+            System.out.println("Length " + audio.length());
+         }
+      });
+
+      // if reverse button clicked then execute reverse()
+      revButton.addActionListener(new ActionListener()
+      {
+         public void actionPerformed(ActionEvent e)
+         {
+            audio.reverse();
+         }
+      });
+
+      slowButton.addActionListener(new ActionListener()
+      {
+         public void actionPerformed(ActionEvent e)
+         {
+            audio.stretch();
+         }
+      });
+
+
+      fastButton.addActionListener(new ActionListener()
+	  {
+	      public void actionPerformed(ActionEvent e)
+	      {
+	         audio.compress();
+	      }
+      });
+
+
+      mirrorButton.addActionListener(new ActionListener()
+	  {
+	      public void actionPerformed(ActionEvent e)
+	      {
+	         audio.mirror();
+	      }
+      });
+      // set visible so the frame is seen
+      setVisible(true);
+   }
+
+   /**
+   * main method
+   * @param - args stores command line arguments (not used)
+   */
+   public static void main(String args[])
+   {
+      String fileName;  // wav file name
+      fileName = JOptionPane.showInputDialog("Enter .wav file name:");
+
+      audio = new Audio(fileName, 128000);    // create Audio object
+
+      AudioGUI aGUI = new AudioGUI();         // create GUI
+
+      // exit program if window is closed
+      aGUI.addWindowListener(
+         new WindowAdapter()
+         {
+            public void windowClosing(WindowEvent e)
+            {  System.exit(0);  }
+         }
+      );
+   }
+
+   /**
+   * sets audioInfo text field with file name
+   */
+   private void setAudioInfo()
+   {
+      audioInfo.setText("file name: " + audio.fileName());
+   }
+
+}
+

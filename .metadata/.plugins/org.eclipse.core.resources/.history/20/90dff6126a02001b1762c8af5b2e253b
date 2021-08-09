@@ -1,0 +1,17 @@
+/* Rose X.
+ * September 2020
+ * Write a method that appends one array list to another
+ */
+public class problemOne {
+
+	public static void main(String[] args) {
+		
+
+	}
+	public static ArrayList <Integer> append(ArrayList<Integer> a, ArrayList<Integer> b) {
+		for (int value: b) {
+			
+		}
+	}
+
+}

@@ -1,0 +1,42 @@
+import java.util.Arrays;
+
+/* Rose X.
+ * September 2020
+ * Write a method that appends one array list to another
+ */
+public class problemOne {
+
+	public static void main(String[] args) {
+		int [] arrayA = {1, 4, 9, 16};
+		System.out.println(Arrays.toString(arrayA));
+		int [] arrayB = {9, 7, 4, 9, 11};
+		System.out.println(Arrays.toString(arrayB));
+		
+		int [] newArray = Arrays.copyOf(arrayA, arrayA.length + arrayB.length);
+		int posForB = 0;
+		for (int i = arrayA.length + 1; i < newArray.length; i++) {
+			newArray[i] = arrayB[posForB];
+			posForB++;
+			//System.out.println(newArray[arrayA.length + 1]);
+			
+		}
+	
+		System.out.println(newArray[4]);
+		//System.out.println(Arrays.toString(newArray));
+		}
+	}
+	/**public static ArrayList <Integer> append(ArrayList<Integer> a, ArrayList<Integer> b) {
+		for (int value: b) {
+			
+			
+			
+			
+			
+			
+			
+
+			
+		}
+	} */
+
+

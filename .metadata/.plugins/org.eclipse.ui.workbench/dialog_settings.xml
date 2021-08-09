@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.ui.wizards.export.ZipFile"/>
+		<item key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID" value="org.eclipse.ui.wizards.import.ZipFile"/>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
+		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\xrose\Documents\CSC\FinalExam\persons.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\FinalExam\swapElements.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\FinalExam\FinalTest.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch10\Ch10-11_Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch9\Ch9 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Test_2\AddressClass.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Test_2\NumberList.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch8\Ch8 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch7\Ch7 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch6\Ch6 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch6\Audio Lab.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch6\Problem One.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch5\Ch5 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Test 1\Test 1 Part 2. zip.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Test 1\Test 1 Part 1. zip.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch4 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch3\Ch3 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch2\Assignments\Ch2 Assignments.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch 1\Assignments\Ch1 Assignment.zip"/>
+			<item value="C:\Users\xrose\Documents\CSC\Ch 1\Assignments\Ch 1 Assignment.zip"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+		<item key="actionSetFilter" value="true"/>
+		<item key="internalFilter" value="true"/>
+		<item key="uncategorizedFilter" value="true"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_WIDTH" value="450"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_HEIGHT" value="506"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.ui.internal.quickaccess.QuickAccessDialogDIALOG_USE_PERSISTED_LOCATION" value="false"/>
+		<list key="orderedElements">
+			<item value="org.eclipse.ui.wizards.new.folder"/>
+			<item value="org.eclipse.oomph.setup.ui.questionnaire"/>
+		</list>
+		<list key="orderedProviders">
+			<item value="org.eclipse.ui.wizards"/>
+			<item value="org.eclipse.ui.commands"/>
+		</list>
+		<list key="textEntries">
+			<item value="1"/>
+			<item value="1"/>
+		</list>
+		<list key="textArray">
+			<item value="folder"/>
+			<item value="test"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+		<item key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<list key="WizardZipFileResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\xrose\Documents\CSC\StarterAudioLab.zip"/>
+		</list>
+	</section>
+	<section name="FileSystemExportWizard">
+		<item key="WizardFileSystemResourceExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID" value="false"/>
+		<item key="WizardFileSystemResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="false"/>
+		<item key="WizardFileSystemResourceExportPage1.STORE_RESOLVE_LINKED_RESOURCES_ID" value="false"/>
+		<list key="WizardFileSystemResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\xrose\Documents\CSC"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.dialogs.WorkbenchEditorsDialog">
+		<item key="allPersp" value="false"/>
+		<item key="sort" value="0"/>
+		<list key="bounds">
+			<item value="253"/>
+			<item value="16"/>
+			<item value="798"/>
+			<item value="553"/>
+		</list>
+		<list key="columns">
+			<item value="252"/>
+			<item value="506"/>
+		</list>
+	</section>
+</section>

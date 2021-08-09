@@ -1,0 +1,17 @@
+//Rose Xiao
+// September 2020
+ /** the program reads a word and prints word in reverse. */
+import java.util.Scanner;
+
+public class problemThree {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter a word: ");
+		String word = in.next();
+		
+		
+
+	}
+
+}

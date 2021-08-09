@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;Ch3 Assignmentss/src&apos;&#x0D;&#x0A;- Original project: &apos;Ch3 Practice Exercises&apos;&#x0D;&#x0A;- Destination element: &apos;Ch3 Assignmentss/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     conversions.java&#x0D;&#x0A;     sorting_three_words.java&#x0D;&#x0A;- Update references to refactored element" description="Move files" destination="=Ch3 Assignmentss/src" element1="conversions.java" element2="sorting_three_words.java" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1599479800543" units="0" version="1.0"/>
+</session>

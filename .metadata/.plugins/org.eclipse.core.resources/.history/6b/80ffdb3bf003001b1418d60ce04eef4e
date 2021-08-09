@@ -1,0 +1,206 @@
+/**
+* Audio.java, 
+* Period:  
+* @author ?
+* @version 1.1, 10/3/2005  
+*
+* Class that reads, plays, determines statistics, and
+* manipulates the audio from a .wav file
+*/
+
+import  java.io.File;
+import  java.io.IOException;
+
+import  javax.sound.sampled.AudioFormat;
+import  javax.sound.sampled.AudioInputStream;
+import  javax.sound.sampled.AudioSystem;
+import  javax.sound.sampled.DataLine;
+import  javax.sound.sampled.LineUnavailableException;
+import  javax.sound.sampled.SourceDataLine;
+
+public class Audio
+{
+   private String           fileName;          // .wav file name
+   private AudioInputStream audioInputStream;  // stream for audio samples
+   private AudioFormat      audioFormat;       // audio format info
+   private SourceDataLine   line;              // object audio input/output
+   private DataLine.Info    info;              // info about audio input/output
+   private int              numBytes;          // number of data bytes in audio 
+                                               //   array, (the logical size)
+   private byte[]           audioData;         // audio array
+
+//**
+//** you must complete the following methods for Assignment 8
+//**
+
+   /**
+   * Assume audioData contains numBytes of audio data
+   * @return the average value in audioData   
+   */
+   public double sampleAverage()
+   {
+      // required for Assignment 8 - Part 1
+      return 0.0;
+   }
+
+   /**
+   * Assume audioData contains numBytes of audio data
+   * @return the standard deviation of audioData   
+   */
+   public double sampleStandDev()
+   {
+      // required for Assignment 8 - Part 1
+      return 0.0;
+   }
+
+   /**
+   * Assume fileName contains name of audio file
+   * @return name of the audio file   
+   */  
+   public String fileName()
+   {
+      // required for Assignment 8 - Part 1
+
+      return "Pluf";
+   }
+
+   /**
+   * Assume audioData contains numBytes of audio data
+   * @return the audio length in seconds   
+   */
+   public double length()
+   {
+      // the following variables are required to determine  the length
+      int bytesPerFrame = audioFormat.getFrameSize();   // bytes per sample
+      double sampleRate = audioFormat.getSampleRate();  // samples per second
+      
+      // required for Assignment 8 - Part 1
+
+      return 0.0;
+   }
+
+//**
+//** you must complete the following methods for Assignment 8 - Part 2
+//**
+
+   /**
+   * Assuming audioData contains numBytes of audio data
+   * method reverses the contents of the array   
+   */
+   public void reverse()
+   {
+      // required for Assignment 8 - Part 2
+   }
+
+   /** 
+   * Assuming audioData contains numBytes of audio data
+   * method removes every other sample from audioData   
+   */
+   public void compress()
+   {
+      // required for Assignment 8 - Part 2
+   }
+
+   /**
+   * Assuming audioData contains numBytes of audio data
+   * method duplicates every other sample in audioData   
+   */ 
+   public void stretch()
+   {
+      // required for Assignment 8 - Part 2
+   }
+
+   /** 
+   * Assuming audioData contains numBytes of audio data
+   * method concatenates reversed data to end of audioData   
+   */  
+   public void mirror()
+   {
+      // required for Assignment 8 - Part 2
+   }
+
+
+//**
+//** following methods are complete, DO NOT CHANGE!
+//**
+
+   /**
+   * Constructor reads audio samples from .wav file and stores 
+   * in audioData array
+   * @param - name stores the name of a vaild .wav file,
+   * @param - maxSize stores a positive integer representing
+   *           max array size
+   */
+   public Audio(String name, int maxSize)
+   {
+      // set file name and create file object
+      fileName         = name;
+      File soundFile   = new File(fileName);
+
+      // open audio file
+      audioInputStream = null;
+      try
+      {
+         audioInputStream = AudioSystem.getAudioInputStream(soundFile);
+      }
+      catch(Exception e)
+      {
+         e.printStackTrace();
+         System.exit(1);
+      }
+
+      // read audio file format info
+      audioFormat = audioInputStream.getFormat();
+      line = null;
+      info = new DataLine.Info(SourceDataLine.class, audioFormat);
+      try
+      {
+         line = (SourceDataLine) AudioSystem.getLine(info);
+         line.open(audioFormat);
+      }
+      catch(LineUnavailableException e)
+      {
+         e.printStackTrace();
+         System.exit(1);
+      }
+      catch(Exception e)
+      {
+         e.printStackTrace();
+         System.exit(1);
+      }
+
+      line.start();
+
+      // create audio array for audio samples
+      numBytes = 0;
+      audioData = new byte[maxSize];
+
+      // read audio samples
+      try
+      {
+         numBytes = audioInputStream.read(audioData, 0, maxSize);
+      }
+      catch(IOException e)
+      {
+         e.printStackTrace();
+      }
+   }
+
+   /**
+   * Assuming audioData contains numBytes of audio data
+   * method plays numBytes of audioData   
+   * @return the number of bytes played
+   */
+   public int play()
+   {
+      int numBytesPlayed = 0;
+      if(numBytes >= 0)
+         numBytesPlayed = line.write(audioData, 0, numBytes);
+      line.drain();
+      return numBytesPlayed;
+   }
+   
+}
+
+
+

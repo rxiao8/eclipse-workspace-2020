@@ -1,0 +1,94 @@
+var numOne= random (200, 300);
+var numTwo= random (100, 300);
+
+var x = 0;
+var speedBoat = 2;
+
+var fishWidth = 40;
+var fishHeight = 40;
+var xFish = 0;
+var yFish = 210;
+var speedFish = 4;
+
+
+
+var fishies = function(){
+image(getImage("avatars/aqualine-sapling"), xFish,yFish,fishWidth,fishHeight );
+image(getImage("avatars/aqualine-seedling"), xFish,yFish+50,fishWidth,fishHeight );
+image(getImage("avatars/aqualine-tree"), xFish,yFish+100,fishWidth,fishHeight );
+image(getImage("avatars/aqualine-ultimate"), xFish,yFish+150,fishWidth,fishHeight );
+xFish += speedFish;
+
+if (xFish>360){
+        speedFish = -4;
+    }
+    else if (xFish<0){
+        speedFish = 4;
+    }
+};
+
+
+draw= function() {
+    background(9, 15, 54);
+    noStroke();
+    
+    var stars = 0;
+    var rowStars = 0;
+    while(stars<3){
+        for(var i = 0; i < 5; i++){
+            fill(245, 237, 19);
+            ellipse(i*100, rowStars*90, 5, 5);
+        }
+    stars++;
+    rowStars++;
+    }
+    
+    fill(198, 226, 230);
+    ellipse(120, 100, 60, 60);
+    
+    fill(112, 45, 54);
+    strokeWeight(5);
+    stroke(21, 94, 89);
+    rect(x,179,90, 60);
+    
+    fill(242, 19, 19);
+    triangle(x + 40, 170, x + 40, 15, x + 90, 160); 
+    
+    fill(200,3, 3);
+    line(x + 41, 170, x + 41, 179);
+    noStroke();
+    
+    x+=speedBoat;
+    
+    if (x>310){
+        speedBoat = -2;
+    }
+    else if (x<0){
+        speedBoat = 2;
+    }
+    for(var i = 0; i < 11; i++){
+    for(var j = 11; j < 26; j++){
+        fill(0, numOne, numTwo);
+        ellipse(i*40, j*20, 60,50);
+    }
+}
+    
+    
+
+
+if(mouseIsPressed){
+    fishies();
+    fill(20, 19, 19);
+    strokeWeight(1);
+    text("woo", xFish - 20, 300, 34, 50);
+}
+else{
+    fill(0, 0, 0);
+    textSize(25);
+    text("Click anywhere to see the creatures!", 150, 250, 150, 150);
+}
+
+};
+
+
+

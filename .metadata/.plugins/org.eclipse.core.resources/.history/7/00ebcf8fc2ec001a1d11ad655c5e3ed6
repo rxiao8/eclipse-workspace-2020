@@ -1,0 +1,9 @@
+package E1_E10;
+
+//Write a program that reads an integer and prints whether it is negative, zero, or positive
+public class E4 {
+	public static void main(String[] args) {
+	
+
+	}
+}

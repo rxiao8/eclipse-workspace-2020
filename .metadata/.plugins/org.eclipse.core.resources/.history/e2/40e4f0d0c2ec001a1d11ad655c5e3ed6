@@ -1,0 +1,36 @@
+package E1_E10;
+
+//Are all the three integers the same/different/neither
+
+import java.util.Scanner;
+
+public class E4 {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.print("Enter an integer: ");
+		int firstInt = in.nextInt();
+		
+		System.out.print("Enter a second integer: ");
+		int secondInt = in.nextInt();
+		
+		System.out.print("Enter a third integer: ");
+		int thirdInt = in.nextInt();
+		
+		if (firstInt == secondInt && secondInt == thirdInt)
+		{
+			System.out.print("The numbers are all the same.");
+		}
+		else if (firstInt != secondInt || secondInt != thirdInt)
+		{
+			System.out.print("The numbers are all different.");
+		}
+		else
+		{
+			System.out.print("Neither.");
+		}
+
+		
+		in.close();
+
+	}
+}

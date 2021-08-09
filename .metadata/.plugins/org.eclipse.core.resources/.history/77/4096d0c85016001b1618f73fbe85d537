@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+/*Rose X.
+ * October 2020
+ * Driver class for the Tic Tac Toe game
+ */
+public class driverTwo {
+	public static void main(String[] args) {
+		Game first = new Game();
+		
+		boolean keepPlaying = true;
+		
+		System.out.println("The game will begin.");
+		first.printBoard();
+		
+		while(keepPlaying) {
+			Scanner in = new Scanner(System.in);			
+			
+			
+			System.out.println("Player One input the row number of your move.");
+			in = new Scanner(System.in);
+			int rowO = in.nextInt();
+			System.out.println("Player One input the column number of your move.");
+			int columnO = in.nextInt();
+			first.playerOneMoves(rowO, columnO);
+			
+			
+			System.out.println("Player Two input the row number of your move.");
+			int rowT = in.nextInt();
+			System.out.println("Player Two input the column number of your move.");
+			int columnT = in.nextInt();
+			first.playerTwoMoves(rowT, columnT);
+		
+			int win = first.checking();
+			if (win == 1) {
+				System.out.println("Player One wins!");
+				/*System.out.println("Type \"Quit\" to stop the game.");
+				if (in.equals("Quit")) {
+					keepPlaying = false;
+				}
+				else {
+					first.newGame();
+				}*/
+			}
+			else if (win == 2) {
+				System.out.println("Player Two wins!");
+				/*System.out.println("Type \"Quit\" to stop the game.");
+				if (in.equals("Quit")) {
+					keepPlaying = false;
+				}
+				else {
+					first.newGame();
+				}*/
+			}
+		}
+		
+		/*
+		
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Begin Tic-Tac-Toe. Type \"Quit\" to stop playing.");
+		if (in.next().equals("Quit")) {
+			keepPlaying = false;
+			break;
+		}
+		while (keepPlaying) {
+		System.out.println("Player One input the row number of your move.");
+		in = new Scanner(System.in);
+		int rowO = in.nextInt();
+		System.out.println("Player One input the column number of your move.");
+		int columnO = in.nextInt();
+		first.playerOneMoves(rowO, columnO);
+		
+		System.out.println("Player Two input the row number of your move.");
+		int rowT = in.nextInt();
+		System.out.println("Player Two input the column number of your move.");
+		int columnT = in.nextInt();
+		first.playerTwoMoves(rowT, columnT);
+		
+		}
+		
+		first.playerOneMoves(1, 1);
+		first.playerTwoMoves(2, 2);
+		first.playerOneMoves(1, 2);
+		first.playerOneMoves(1, 3);
+		*/
+		
+		
+		
+		
+		
+	}
+}

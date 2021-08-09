@@ -1,0 +1,19 @@
+package E1_E10;
+
+//Write a program that reads an integer and prints whether it is negative, zero, or positive
+
+import java.util.Scanner;
+
+public class E1 {
+	public static void main(String[] args) {
+	
+		Scanner in = new Scanner(System.in);
+		
+		System.out.print("Enter an integer: ");
+		int number = in.nextInt();
+		
+		int newnumber = number + 1;
+		System.out.print(newnumber);
+
+	}
+}
